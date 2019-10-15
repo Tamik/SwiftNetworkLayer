@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		870BB29F23557AF50076A3DA /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 870BB29D23557AF50076A3DA /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		870BB2AB23557B840076A3DA /* ResourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BB2AA23557B840076A3DA /* ResourceType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		870BB29A23557AF50076A3DA /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		870BB29D23557AF50076A3DA /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		870BB29E23557AF50076A3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		870BB2AA23557B840076A3DA /* ResourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +48,43 @@
 		870BB29C23557AF50076A3DA /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				870BB2A923557B750076A3DA /* Resource */,
+				870BB2A823557B600076A3DA /* Encoding */,
+				870BB2A723557B590076A3DA /* Service */,
+				870BB2A623557B540076A3DA /* Manager */,
 				870BB29D23557AF50076A3DA /* NetworkLayer.h */,
 				870BB29E23557AF50076A3DA /* Info.plist */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		870BB2A623557B540076A3DA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		870BB2A723557B590076A3DA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		870BB2A823557B600076A3DA /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		870BB2A923557B750076A3DA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				870BB2AA23557B840076A3DA /* ResourceType.swift */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +130,7 @@
 				TargetAttributes = {
 					870BB29923557AF50076A3DA = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -131,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870BB2AB23557B840076A3DA /* ResourceType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +297,7 @@
 		870BB2A323557AF50076A3DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -275,6 +313,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.Tamik.NetworkLayer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +322,7 @@
 		870BB2A423557AF50076A3DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
