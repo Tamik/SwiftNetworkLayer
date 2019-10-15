@@ -14,6 +14,7 @@
 		870BB2B123557D1B0076A3DA /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BB2B023557D1B0076A3DA /* ParameterEncoding.swift */; };
 		870BB2B323557DEE0076A3DA /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BB2B223557DEE0076A3DA /* URLParameterEncoder.swift */; };
 		870BB2B623557E2B0076A3DA /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BB2B523557E2B0076A3DA /* JSONParameterEncoder.swift */; };
+		870BB2B823566C890076A3DA /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BB2B723566C890076A3DA /* NetworkRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		870BB2B023557D1B0076A3DA /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		870BB2B223557DEE0076A3DA /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 		870BB2B523557E2B0076A3DA /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		870BB2B723566C890076A3DA /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				870BB2AA23557B840076A3DA /* ResourceType.swift */,
 				870BB2AC23557C3C0076A3DA /* HTTPMethod.swift */,
+				870BB2B723566C890076A3DA /* NetworkRouter.swift */,
 				870BB2AE23557CA00076A3DA /* HTTPTask.swift */,
 			);
 			path = Service;
@@ -188,6 +191,7 @@
 				870BB2B123557D1B0076A3DA /* ParameterEncoding.swift in Sources */,
 				870BB2B323557DEE0076A3DA /* URLParameterEncoder.swift in Sources */,
 				870BB2AB23557B840076A3DA /* ResourceType.swift in Sources */,
+				870BB2B823566C890076A3DA /* NetworkRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
