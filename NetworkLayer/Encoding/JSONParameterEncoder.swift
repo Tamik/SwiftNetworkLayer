@@ -11,6 +11,12 @@ import Foundation
 
 public struct JSONParameterEncoder: ParameterEncoder {
     public static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
-        <#code#>
+        do {
+            let jsonAsData = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+
+            urlRequest.httpBody = jsonAsData
+        } catch {
+            throw NetworkLayerError.encodingFailed
+        }
     }
 }
