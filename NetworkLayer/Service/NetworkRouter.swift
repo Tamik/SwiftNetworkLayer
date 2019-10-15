@@ -9,6 +9,8 @@
 import Foundation
 
 
+public typealias NetworkRouterCompletion = (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> ()
+
 protocol NetworkRouter: class {
     associatedtype Resource: ResourceType
 
