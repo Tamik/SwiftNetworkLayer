@@ -12,6 +12,23 @@ import Foundation
 class Router<Resource: ResourceType>: NetworkRouter {
     private var task: URLSessionTask?
 
+    fileprivate func configureParameters(bodyParameters: Parameters?,
+                                         urlParameters: Parameters?,
+                                         request: inout URLRequest
+    ) throws {
+        do {
+            if let bodyParameters = bodyParameters {
+                try JSONParameterEncoder.encode(urlRequest: &request, with: bodyParameters)
+            }
+
+            if let urlParameters = urlParameters {
+                try URLParameterEncoder.encode(urlRequest: &request, with: urlParameters)
+            }
+        } catch {
+            throw error
+        }
+    }
+
     fileprivate func buildRequest(from route: Resource) throws -> URLRequest {
         var request = URLRequest(url: route.baseURL.appendingPathComponent(route.path),
                                  cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
