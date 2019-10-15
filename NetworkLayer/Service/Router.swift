@@ -13,7 +13,19 @@ class Router<Resource: ResourceType>: NetworkRouter {
     private var task: URLSessionTask?
 
     func request(_ route: Resource, completion: @escaping NetworkRouterCompletion) {
-        <#code#>
+        let session = URLSession.shared
+
+        do {
+            let request = try self.buildRequest(from: route)
+
+            task = session.dataTask(with: request, completionHandler: { data, response, error in
+                completion(data, response, error)
+            })
+        } catch {
+            completion(nil, nil, error)
+        }
+
+        self.task?.resume()
     }
 
     func cancel() {
