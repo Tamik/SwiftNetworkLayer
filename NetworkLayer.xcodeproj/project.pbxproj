@@ -68,6 +68,7 @@
 		870BB2A723557B590076A3DA /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				870BB2AA23557B840076A3DA /* ResourceType.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -82,7 +83,6 @@
 		870BB2A923557B750076A3DA /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				870BB2AA23557B840076A3DA /* ResourceType.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
