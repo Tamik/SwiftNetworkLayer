@@ -29,6 +29,16 @@ class Router<Resource: ResourceType>: NetworkRouter {
         }
     }
 
+    fileprivate func addAdditionalHeaders(_ additionalHeaders: HTTPHeaders?, request: inout URLRequest) {
+        guard let headers = additionalHeaders else {
+            return
+        }
+
+        for (key, value) in headers {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
+    }
+
     fileprivate func buildRequest(from route: Resource) throws -> URLRequest {
         var request = URLRequest(url: route.baseURL.appendingPathComponent(route.path),
                                  cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
