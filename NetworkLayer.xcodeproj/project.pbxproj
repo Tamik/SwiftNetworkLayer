@@ -10,6 +10,7 @@
 		870BB29F23557AF50076A3DA /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 870BB29D23557AF50076A3DA /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		870BB2AB23557B840076A3DA /* ResourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BB2AA23557B840076A3DA /* ResourceType.swift */; };
 		870BB2AD23557C3C0076A3DA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BB2AC23557C3C0076A3DA /* HTTPMethod.swift */; };
+		870BB2AF23557CA00076A3DA /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BB2AE23557CA00076A3DA /* HTTPTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		870BB29E23557AF50076A3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		870BB2AA23557B840076A3DA /* ResourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceType.swift; sourceTree = "<group>"; };
 		870BB2AC23557C3C0076A3DA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		870BB2AE23557CA00076A3DA /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				870BB2AA23557B840076A3DA /* ResourceType.swift */,
 				870BB2AC23557C3C0076A3DA /* HTTPMethod.swift */,
+				870BB2AE23557CA00076A3DA /* HTTPTask.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870BB2AF23557CA00076A3DA /* HTTPTask.swift in Sources */,
 				870BB2AD23557C3C0076A3DA /* HTTPMethod.swift in Sources */,
 				870BB2AB23557B840076A3DA /* ResourceType.swift in Sources */,
 			);
