@@ -12,6 +12,42 @@ import Foundation
 class Router<Resource: ResourceType>: NetworkRouter {
     private var task: URLSessionTask?
 
+    fileprivate func buildRequest(from route: Resource) throws -> URLRequest {
+        var request = URLRequest(url: route.baseURL.appendingPathComponent(route.path),
+                                 cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
+                                 timeoutInterval: 10.0
+        )
+
+        request.httpMethod = route.httpMethod.rawValue
+
+        do {
+            switch route.task {
+            case .request:
+                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            case .requestParameters(let bodyParameters,
+                                    let urlParameters
+            ):
+                try self.configureParameters(bodyParameters: bodyParameters,
+                                             urlParameters: urlParameters,
+                                             request: &request
+                )
+            case .requestParametersAndHeaders(let bodyParameters,
+                                              let urlParameters,
+                                              let additionHeaders
+            ):
+                self.addAdditionalHeaders(additionHeaders, request: &request)
+                try self.configureParameters(bodyParameters: bodyParameters,
+                                             urlParameters: urlParameters,
+                                             request: &request
+                )
+            }
+
+            return request
+        } catch {
+            throw error
+        }
+    }
+
     func request(_ route: Resource, completion: @escaping NetworkRouterCompletion) {
         let session = URLSession.shared
 
