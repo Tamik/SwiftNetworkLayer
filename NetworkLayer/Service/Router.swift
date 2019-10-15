@@ -92,6 +92,6 @@ class Router<Resource: ResourceType>: NetworkRouter {
     }
 
     func cancel() {
-        <#code#>
+        self.task?.cancel()
     }
 }
