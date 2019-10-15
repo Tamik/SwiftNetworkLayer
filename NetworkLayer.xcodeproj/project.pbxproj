@@ -12,6 +12,7 @@
 		870BB2AD23557C3C0076A3DA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BB2AC23557C3C0076A3DA /* HTTPMethod.swift */; };
 		870BB2AF23557CA00076A3DA /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BB2AE23557CA00076A3DA /* HTTPTask.swift */; };
 		870BB2B123557D1B0076A3DA /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BB2B023557D1B0076A3DA /* ParameterEncoding.swift */; };
+		870BB2B323557DEE0076A3DA /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BB2B223557DEE0076A3DA /* URLParameterEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		870BB2AC23557C3C0076A3DA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		870BB2AE23557CA00076A3DA /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		870BB2B023557D1B0076A3DA /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		870BB2B223557DEE0076A3DA /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				870BB2B023557D1B0076A3DA /* ParameterEncoding.swift */,
+				870BB2B223557DEE0076A3DA /* URLParameterEncoder.swift */,
 			);
 			path = Encoding;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				870BB2AF23557CA00076A3DA /* HTTPTask.swift in Sources */,
 				870BB2AD23557C3C0076A3DA /* HTTPMethod.swift in Sources */,
 				870BB2B123557D1B0076A3DA /* ParameterEncoding.swift in Sources */,
+				870BB2B323557DEE0076A3DA /* URLParameterEncoder.swift in Sources */,
 				870BB2AB23557B840076A3DA /* ResourceType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
